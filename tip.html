@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var people = prompt("How many people?");
+var cost = prompt("How much did it cost?");
+if (people < 6)
+{
+	var service = prompt("How was the service?");
+	if (service === "terrible")
+	{
+		service = 0;
+	}
+	else if (service === "poor")
+	{
+		service = 0.1;
+	}
+	else if (service === "ok")
+	{
+		service = 0.15;
+	}
+	else if (service === "good")
+	{
+		service = 0.20;
+	}
+	else if (service === "great")
+	{
+		service = 0.25;
+	}
+	var tip = (service * cost);
+	console.log("You should probably tip $" + tip);
+}
+if (people > 6)
+{
+	var tip = (cost * 0.20);
+	console.log("You should probably tip $" + tip);
+}
+</script>
+</body>
+</html>
